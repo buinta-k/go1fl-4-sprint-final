@@ -21,7 +21,7 @@ func parsePackage(data string) (int, time.Duration, error) {
 		return 0, 0, fmt.Errorf("ожидается 2 значения")
 	}
 	
-	steps, err:=strconv.Atoi(strings.Trimspace(slice[0])) 
+	steps, err:=strconv.Atoi(slice[0]) 
 	if err!=nil {
 			return 0, 0, err
 			}
@@ -30,7 +30,7 @@ func parsePackage(data string) (int, time.Duration, error) {
 			return 0, 0 , fmt.Errorf("Количество шагов должно быть больше 0")
 		}
 	}
-	t, err2:=time.ParseDuration(strings.Trimspace(slice[1]))
+	t, err2:=time.ParseDuration(slice[1])
 	i err!=nil {
 			return steps, t, nil
 	}
