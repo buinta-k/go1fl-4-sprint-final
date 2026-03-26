@@ -32,7 +32,7 @@ func parsePackage(data string) (int, time.Duration, error) {
 	}
 	t, err2:=time.ParseDuration(strings.Trimspace(slice[1]))
 	i err!=nil {
-			retrun steps, t, nil
+			return steps, t, nil
 	}
 }
 
