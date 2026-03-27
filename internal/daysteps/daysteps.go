@@ -18,7 +18,7 @@ func parsePackage(data string) (int, time.Duration, error) {
 	slice:=strings.Split(data,",")
 	
 	if len(slice)!=2 {
-		return 0, 0, fmt.Errorf("ожидается 2 значения")
+		return 0, 0, fmt.Errorf("Длина слайса не равна 2")
 	}
 	
 	steps, err:=strconv.Atoi(slice[0]) 
