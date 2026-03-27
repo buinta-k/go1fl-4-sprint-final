@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"fmt"
 
-	"://github.com"
+	"internal/daysteps"
 )
 
 const (
