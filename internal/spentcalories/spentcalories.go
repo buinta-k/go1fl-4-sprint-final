@@ -24,7 +24,7 @@ func parseTraining(data string) (int, string, time.Duration, error) {
 		return 0, "", 0, fmt.Errorf("Длина слайса не равна 3")
 	}
 	
-	steps, err:=strconv.Atoi(slice[0])
+	steps, err:=strconv.Atoi((strings.TrimSpace(slice[0]))
 	if err!=nil {
 		return 0, "", 0, err
 	}
@@ -40,7 +40,7 @@ func parseTraining(data string) (int, string, time.Duration, error) {
 func distance(steps int, height float64) float64 {
 	// TODO: реализовать функцию
 	length:=heigth*stepLengthCoefficient
-	return ( float64(steps)*length)/mInKm
+	return (float64(steps)*length)/mInKm
 }
 
 func meanSpeed(steps int, height float64, duration time.Duration) float64 {
