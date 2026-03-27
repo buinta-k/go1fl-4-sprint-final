@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"fmt"
 
-	"internal/spentcalories"
+	"github.com/Yandex-Practicum/tracker/spentcalories"
 )
 
 const (
