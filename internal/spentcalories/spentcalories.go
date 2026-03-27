@@ -48,7 +48,7 @@ func distance(steps int, height float64) float64 {
 
 func meanSpeed(steps int, height float64, duration time.Duration) float64 {
 	// TODO: реализовать функцию
-	if duration<=0 || weight<=0 || height<=0 {
+	if duration<=0 || height<=0 {
 		return 0
 	}
 
@@ -60,7 +60,7 @@ func meanSpeed(steps int, height float64, duration time.Duration) float64 {
 func TrainingInfo(data string, weight, height float64) (string, error) {
 	// TODO: реализовать функцию
 	if weight<=0 || height<=0 {
-		return 0, fmt.Errorf("Некорректный параметр")
+		return "", fmt.Errorf("Некорректный параметр")
 	}
 	steps, sport, duration, err:=parseTraining(data)
 	if err!=nil {
