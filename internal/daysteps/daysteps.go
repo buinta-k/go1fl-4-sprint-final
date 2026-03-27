@@ -29,7 +29,7 @@ func parsePackage(data string) (int, time.Duration, error) {
 	if steps<=0 {
 			return 0, 0 , fmt.Errorf("Количество шагов должно быть больше 0")
 		}
-	}
+	
 	t, err2:=time.ParseDuration(slice[1])
 	i err!=nil {
 			return steps, t, nil
