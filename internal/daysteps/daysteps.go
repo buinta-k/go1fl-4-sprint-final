@@ -33,7 +33,7 @@ func parsePackage(data string) (int, time.Duration, error) {
 			return 0, 0 , fmt.Errorf("Количество шагов должно быть больше 0")
 		}
 	
-	t, err2:=time.ParseDuration(slice[1])
+	t, err2:=time.ParseDuration(strings.TrimSpace(slice[1]))
 	if err2!=nil {
 			return 0, 0, err2
 	}
