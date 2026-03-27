@@ -44,7 +44,7 @@ func DayActionInfo(data string, weight, height float64) string {
 	// TODO: реализовать функцию
 	steps, t, err:=parsePackage(data)
 	if err!=nil {
-		fmt.Println(err)
+		log.Println(err)
 		return ""
 	}
 	
@@ -57,6 +57,7 @@ func DayActionInfo(data string, weight, height float64) string {
 	calories, err2:=spentcalories.WalkingSpentCalories(steps, weight, height, t)
 	
 	if err2 != nil {
+		log.Println(err)
    		 return "" 
 	}
 	
