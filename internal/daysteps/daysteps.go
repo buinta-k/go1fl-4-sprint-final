@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"fmt"
 
-	"internal/daysteps"
+	"internal/spentcalories"
 )
 
 const (
