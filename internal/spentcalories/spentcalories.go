@@ -29,7 +29,7 @@ func parseTraining(data string) (int, string, time.Duration, error) {
 		return 0, "", 0, err
 	}
 
-	t, err2:=time.ParseDuration(strings.Trimspace(slice[2]))
+	t, err2:=time.ParseDuration(strings.TrimSpace(slice[2]))
 	if err2!=nil {
 		return 0, "", 0, err2
 	}
