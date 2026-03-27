@@ -5,6 +5,7 @@ import (
 	"strings"
 	"strconv"
 	"fmt"
+	"log"
 
 	"github.com/Yandex-Practicum/tracker/internal/spentcalories"
 )
