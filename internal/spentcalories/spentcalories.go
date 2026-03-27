@@ -69,13 +69,13 @@ func TrainingInfo(data string, weight, height float64) (string, error) {
 		if err2!=nil {
 			return "", err2
 		}
-		return fmt.Sprintf("Тип тренировки: %s;Длительность: %.2f ч;Дистанция: %.2f км;Скорость: %.2f км/ч;Сожгли калорий: %.2f.", sport, duration.Hours(), distance1, speed, calories), nil
+		return fmt.Sprintf("Тип тренировки: %s;Длительность: %.2f ч. ;Дистанция: %.2f км;Скорость: %.2f км/ч;Сожгли калорий: %.2f.", sport, duration.Hours(), distance1, speed, calories), nil
 		case "Бег":
 		calories, err3:=RunningSpentCalories(steps, weight, height, duration)
 		if err3!=nil {
 			return "", err3
 		}
-		return fmt.Sprintf("Тип тренировки: %s;Длительность: %.2f ч;Дистанция: %.2f км;Скорость: %.2f км/ч;Сожгли калорий: %.2f.", sport, duration.Hours(), distance1, speed, calories), nil
+		return fmt.Sprintf("Тип тренировки: %s;Длительность: %.2f ч. ;Дистанция: %.2f км;Скорость: %.2f км/ч;Сожгли калорий: %.2f.", sport, duration.Hours(), distance1, speed, calories), nil
 		default:
 		return "", fmt.Errorf("неизвестный тип тренировки")
 	}
