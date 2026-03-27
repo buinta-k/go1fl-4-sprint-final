@@ -19,7 +19,7 @@ const (
 func parseTraining(data string) (int, string, time.Duration, error) {
 	// TODO: реализовать функцию
 	slice:=strings.Split(data,",")
-	if slice!=3 {
+	if len(slice)!=3 {
 		return 0, "", 0, fmt.Errorf("Длина слайса не равна 3")
 	}
 	
