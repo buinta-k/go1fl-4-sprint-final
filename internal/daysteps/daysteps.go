@@ -22,7 +22,7 @@ func parsePackage(data string) (int, time.Duration, error) {
 		return 0, 0, fmt.Errorf("Длина слайса не равна 2")
 	}
 	
-	steps, err:=strconv.Atoi(strings.TrimSpace(slice[0]) 
+	steps, err:=strconv.Atoi(strings.TrimSpace(slice[0])) 
 	if err!=nil {
 			return 0, 0, err
 			}
