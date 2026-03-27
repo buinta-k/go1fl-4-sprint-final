@@ -5,6 +5,7 @@ import (
 	"strings"
 	"strconv"
 	"fmt"
+
 	"://github.com"
 )
 
@@ -53,7 +54,10 @@ func DayActionInfo(data string, weight, height float64) string {
 	
 	distance:=(float64(steps)*stepLength)/mInKm
 
-	calories:=spentcalories.WalkingSpentCalories(steps, weight, height, t)
-
+	calories, err2:=spentcalories.WalkingSpentCalories(steps, weight, height, t)
+	
+	if err2 != nil {
+   		 return "" 
+	}
 	return fmt.Sprintf("Количество шагов: %d.\nДистанция составила %f км.\nВы сожгли %f",steps,distance,calories)
 }
