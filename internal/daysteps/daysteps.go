@@ -32,9 +32,10 @@ func parsePackage(data string) (int, time.Duration, error) {
 		}
 	
 	t, err2:=time.ParseDuration(slice[1])
-	i err!=nil {
-			return steps, t, nil
+	if err!=nil {
+			return 0, 0, err2
 	}
+	return steps, t, nil
 }
 
 func DayActionInfo(data string, weight, height float64) string {
@@ -49,9 +50,9 @@ func DayActionInfo(data string, weight, height float64) string {
 		return ""
 	}
 	
-	distance:=(steps*stepLength)/mInKm
+	distance:=(float64(steps)*stepLength)/mInKm
 
 	calories:=WalkingSpentCalories(steps, weight, height, distance)
 
-	return fmt.Sprintf("Количество шагов: %d.\nДистанция составила %d км.\nВы сожгли %d",steps,distance,calories)
+	return fmt.Sprintf("Количество шагов: %d.\nДистанция составила %f км.\nВы сожгли %f",steps,distance,calories)
 }
