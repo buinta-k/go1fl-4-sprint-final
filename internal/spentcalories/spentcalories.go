@@ -29,11 +29,19 @@ func parseTraining(data string) (int, string, time.Duration, error) {
 		return 0, "", 0, err
 	}
 
+	if steps <= 0 {
+		return 0, "", 0, fmt.Errorf("количество шагов должно быть положительным")
+	}
+	
 	t, err2:=time.ParseDuration(strings.TrimSpace(slice[2]))
 	if err2!=nil {
 		return 0, "", 0, err2
 	}
 
+	if t <= 0 {
+		return 0, "", 0, fmt.Errorf("продолжительность должна быть больше нуля")
+	}
+	
 	return steps, slice[1], t, nil
 }
 
